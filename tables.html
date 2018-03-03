@@ -48,7 +48,7 @@
   </div>
 
   <script type="text/javascript">
- //put in document.ready
+    $( document ).ready(function() {
       $.get("/api/reservationList", function(data) {
         
         console.log(data);
@@ -110,6 +110,7 @@
           $("#waitlist").text("No reservations yet, please make one");
         }
       });
+    }
 
   </script>
 </body>
