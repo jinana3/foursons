@@ -31,7 +31,7 @@ function createReservation(newCustomer){
   
   }
 
-  var newCustomer = new CustomerConst(newCustomer);
+  var newCustomer = new CustomerConst(name, phone, email);
   
 
   // var oscar = new CustomerConst("oscar", "123" , "oscar@gmail.com");
