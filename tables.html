@@ -62,7 +62,7 @@
             tableDIV.attr("class", "tableDIVs");
             tableDIV.attr("id", tableNumber);
 
-            var nameDIV = $("<div>").JSON.stringify(name);
+            var nameDIV = $("<div>").text(name);
             tableDIV.append(nameDIV);
 
             var phoneDIV = $("<div>").text(phone);
