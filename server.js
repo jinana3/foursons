@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 var app = express();
-var  PORT = 3000;
+var  PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -15,9 +15,6 @@ var reservationList = [];
 var waitList = [];
 
 // createReservation();
-
-
-
 
 function createReservation(newCustomer){
 
@@ -60,17 +57,17 @@ function createReservation(newCustomer){
 
 //Routing -- GET
 
-app.get("/api", function(req, res) {
+app.get("/", function(req, res) {
 
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get("/api/reserve", function(req, res) {
+app.get("/reserve", function(req, res) {
 
   res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
-app.get("/api/tables", function(req, res) {
+app.get("\/tables", function(req, res) {
 
   res.sendFile(path.join(__dirname, "tables.html"));
 });
@@ -91,7 +88,7 @@ app.post("/api/new", function(req, res) {
 
   var newCustomer = req.body;
   createReservation(newCustomer);
-  res.json();
+  res.json();//this is just testing
 });
 
 //Routing - POST

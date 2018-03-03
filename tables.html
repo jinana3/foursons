@@ -58,7 +58,7 @@
             var tableNumber = i + 1;
             var name = data[i].name;
             var phone = data[i].phone;
-            var people = data[i].people;
+            var email = data[i].email;
             tableDIV.attr("class", "tableDIVs");
             tableDIV.attr("id", tableNumber);
 
@@ -68,8 +68,8 @@
             var phoneDIV = $("<div>").text(phone);
             tableDIV.append(phoneDIV);
 
-            var peopleDIV = $("<div>").text(people);
-            tableDIV.append(peopleDIV);
+            var emailDIV = $("<div>").text(email);
+            tableDIV.append(emailDIV);
 
             $("#reservationList").append(tableDIV);
 
@@ -89,7 +89,7 @@
             var waitNumber = i + 1;
             var name = data[i].name;
             var phone = data[i].phone;
-            var people = data[i].people;
+            var email = data[i].email;
             waitDIV.attr("class", "waitDIVs");
             waitDIV.attr("id", waitNumber);
 
@@ -99,8 +99,8 @@
             var phoneDIV = $("<div>").text(phone);
             waitDIV.append(phoneDIV);
 
-            var peopleDIV = $("<div>").text(people);
-            waitDIV.append(peopleDIV);
+            var emailDIV = $("<div>").text(email);
+            waitDIV.append(emailDIV);
 
             $("#waitlist").append(waitDIV);
 
